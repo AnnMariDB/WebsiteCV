@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://annmaridb.github.io/WebsiteCV/sitemap.xml

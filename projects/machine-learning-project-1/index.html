@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-ZA" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine Learning Project 1 · Ann-Mari De Beer</title>
+<meta name="description" content="Predicts a learner's grade class from study time, absences, parental support, activities and GPA. Four models were trained and compared, and a web dashboar…">
+<link rel="canonical" href="https://annmaridb.github.io/WebsiteCV/projects/machine-learning-project-1/">
+<meta name="theme-color" content="#130a2b">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('amdb-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<link rel="icon" href="/WebsiteCV/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ann-Mari De Beer">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:title" content="Machine Learning Project 1 · Ann-Mari De Beer">
+<meta property="og:description" content="Predicts a learner's grade class from study time, absences, parental support, activities and GPA. Four models were trained and compared, and a web dashboar…">
+<meta property="og:url" content="https://annmaridb.github.io/WebsiteCV/projects/machine-learning-project-1/">
+<meta property="og:image" content="https://annmaridb.github.io/WebsiteCV/img/og-image.png?v=5c47fce4">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ann-Mari De Beer: Data Engineer &amp; Database Administrator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Machine Learning Project 1 · Ann-Mari De Beer">
+<meta name="twitter:description" content="Predicts a learner's grade class from study time, absences, parental support, activities and GPA. Four models were trained and compared, and a web dashboar…">
+<meta name="twitter:image" content="https://annmaridb.github.io/WebsiteCV/img/og-image.png?v=5c47fce4">
+<meta name="twitter:image:alt" content="Ann-Mari De Beer: Data Engineer &amp; Database Administrator">
+<link rel="stylesheet" href="/WebsiteCV/assets/site.css?v=2401830d">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header on-band">
+  <div class="wrap">
+    <button class="menu-btn" type="button" aria-label="Open the menu" aria-controls="site-menu" aria-expanded="false" data-menu-open hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Menu</span></button>
+    <a class="brand" href="/WebsiteCV/"><span>Ann-Mari De Beer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="/WebsiteCV/">Home</a></li><li><a href="/WebsiteCV/cv/">Full CV</a></li><li><a href="/WebsiteCV/projects/" aria-current="page">Projects</a></li><li class="nav__optional"><a href="/WebsiteCV/#contact">Contact me</a></li></ul></nav>
+    <div class="header-actions">
+      <span class="nav__optional"><a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/in/ann-mari-de-beer/" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5.01 2.5 2.5 0 01.01-5.01zM3 9.5h4V21H3V9.5zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5z"/></svg>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></span>
+      <a class="btn btn--teal btn--sm" href="/WebsiteCV/files/Ann-Mari_De_Beer_CV_compact.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>Download CV</a>
+      <a class="btn btn--teal btn--sm header-contact" href="/WebsiteCV/#contact">Contact me</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode" hidden><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    </div>
+  </div>
+  <button class="drawer-scrim" type="button" tabindex="-1" aria-label="Close the menu" data-menu-close hidden></button>
+  <div class="drawer" id="site-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__top">
+      <a class="brand" href="/WebsiteCV/"><span>Ann-Mari De Beer</span></a>
+      <button class="drawer__close" type="button" aria-label="Close the menu" data-menu-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <nav class="drawer__nav" aria-label="Menu">
+      <p class="drawer__label">Pages</p>
+      <ul><li><a href="/WebsiteCV/">Home</a></li><li><a href="/WebsiteCV/cv/">Full CV</a></li><li><a href="/WebsiteCV/projects/" aria-current="page">Projects</a></li></ul>
+      <p class="drawer__label">Home page sections</p>
+      <ul><li><a href="/WebsiteCV/#profile">Profile</a></li><li><a href="/WebsiteCV/#skills">Core skills</a></li><li><a href="/WebsiteCV/#experience">Work experience</a></li><li><a href="/WebsiteCV/#education">Qualifications</a></li><li><a href="/WebsiteCV/#university">University projects</a></li><li><a href="/WebsiteCV/#contact">Get in touch</a></li></ul>
+    </nav>
+    <div class="drawer__actions">
+      
+      <button class="btn btn--ghost" type="button" data-copy-email data-user="annmaridebeer" data-domain="gmail.com" hidden><svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg><svg class="icon-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-copy-label>Copy email address</span></button><span class="visually-hidden" role="status" aria-live="polite" data-copy-status></span>
+      <button class="btn btn--ghost" type="button" data-copy-link="https://annmaridb.github.io/WebsiteCV/" hidden><svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg><svg class="icon-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-copy-label>Copy website link</span></button><span class="visually-hidden" role="status" aria-live="polite" data-copy-status></span>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/in/ann-mari-de-beer/" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5.01 2.5 2.5 0 01.01-5.01zM3 9.5h4V21H3V9.5zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5z"/></svg>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="btn btn--ghost" href="/WebsiteCV/files/Ann-Mari_De_Beer_CV_compact.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>Download CV</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero on-band" aria-labelledby="top"><div class="wrap">
+  <p class="crumbs"><a href="/WebsiteCV/projects/">Projects</a> <span aria-hidden="true">/</span> Machine Learning Project 1</p>
+  <h1 id="top">Machine Learning Project 1</h1>
+  <p class="page-hero__sub">Predicts a learner's grade class from study time, absences, parental support, activities and GPA. Four models were trained and compared, and a web dashboard shows how each performed and predicts a grade for a new learner.</p>
+  
+</div></section>
+<section class="section"><div class="wrap proj-detail">
+  <dl class="facts"><div class="fact"><dt>Type</dt><dd>University project</dd></div><div class="fact"><dt>Year</dt><dd>2025</dd></div><div class="fact"><dt>Context</dt><dd>Group project, Belgium Campus</dd></div><div class="fact"><dt>Tech</dt><dd><ul class="chips" aria-label="Tech"><li class="chip chip--teal">Python</li><li class="chip chip--teal">scikit-learn</li><li class="chip chip--teal">XGBoost</li><li class="chip chip--teal">TensorFlow (Keras)</li><li class="chip chip--teal">Dash</li><li class="chip chip--teal">Plotly</li></ul></dd></div><div class="fact"><dt>Outcome</dt><dd>A random forest did best, with about 91% accuracy on held-out validation data, ahead of XGBoost (about 90%), logistic regression (about 83%) and a neural network (about 81%).</dd></div></dl>
+  <div class="proj-detail__lede"><p>The student data was cleaned and prepared, then split 80/20 with the same mix of grade classes in both parts. Accuracy, precision, recall and F1 were compared for logistic regression, a random forest, XGBoost and a small neural network.</p><p>A Dash web app, set up to run on Render, charts the results for each model and lets a user enter a learner's details to get a predicted grade from the random forest.</p></div>
+  
+  <div class="btn-row">
+    <a class="btn btn--primary" href="https://github.com/AnnMariDB/MLG382-Projects/tree/main/MLG382Project1" rel="noopener" target="_blank">Source code on GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <a class="btn btn--ghost" href="/WebsiteCV/projects/">All projects</a>
+    <a class="btn btn--ghost" href="/WebsiteCV/cv/">Full CV</a>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer on-band">
+  <div class="wrap">
+    <div><span class="site-footer__name">Ann-Mari De Beer</span><br>Data Engineer &amp; Database Administrator <span aria-hidden="true">·</span> Cape Town / Stellenbosch</div>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/ann-mari-de-beer/" rel="me noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+      <li><a class="" data-email data-show-address data-user="annmaridebeer" data-domain="gmail.com" hidden><span data-email-label>Email</span></a><noscript><a class="" href="https://www.linkedin.com/in/ann-mari-de-beer/" rel="me noopener">Contact via LinkedIn</a></noscript></li>
+      <li><a href="/WebsiteCV/files/Ann-Mari_De_Beer_CV_compact.pdf" download>Compact CV (PDF)</a></li>
+      <li><a href="/WebsiteCV/files/Ann-Mari_De_Beer_CV_detailed.pdf" download>Detailed CV (PDF)</a></li>
+    </ul>
+    <p>&copy; 2026 Ann-Mari De Beer</p>
+    <p class="site-footer__top"><a href="#">Back to top<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6l6-6 6 6"/></svg></a></p>
+  </div>
+</footer>
+<script src="/WebsiteCV/assets/site.js?v=4f81b198" defer></script>
+</body>
+</html>
